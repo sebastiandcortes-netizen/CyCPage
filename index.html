@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cortés & Capizzano — Estética & Cirugía</title>
+  <style>
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="script.js"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__logo">
+      <img src="logo.png" alt="CyC Estética y Cirugía" class="nav__logo-img" />
+    </div>
+    <ul class="nav__links">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#tecnologia">Tecnología</a></li>
+      <li><a href="#contacto" class="nav__cta">Solicitar turno</a></li>
+    </ul>
+    <button class="nav__hamburger" aria-label="Menú" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#nosotros" onclick="toggleMenu()">Nosotros</a></li>
+      <li><a href="#especialidades" onclick="toggleMenu()">Especialidades</a></li>
+      <li><a href="#tecnologia" onclick="toggleMenu()">Tecnología</a></li>
+      <li><a href="#contacto" onclick="toggleMenu()">Solicitar turno</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Medicina Estética &amp; Cirugía Plástica</p>
+      <h1 class="hero__title">Tu mejor versión,<br /><em>con respaldo médico.</em></h1>
+      <p class="hero__sub">Tratamientos seguros, personalizados y de última generación.<br />Especialistas en patología cutánea, cirugía plástica y estética integral.</p>
+      <a href="#contacto" class="btn btn--primary">Solicitar turno</a>
+      <a href="#especialidades" class="btn btn--ghost">Ver especialidades</a>
+    </div>
+    <div class="hero__line"></div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section nosotros" id="nosotros">
+    <div class="container">
+      <div class="nosotros__grid">
+        <div class="nosotros__text">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2>Ciencia y<br />sensibilidad,<br /><em>en un mismo lugar.</em></h2>
+          <p class="body-text">Acompañamos a cada paciente en el camino hacia su mejor versión, potenciando su belleza natural y fortaleciendo su confianza mediante tratamientos estéticos seguros, personalizados y de última generación.</p>
+          <p class="body-text">Trabajamos con calidez humana, profesionalismo y compromiso. Nuestro objetivo es que cada visita sea sinónimo de bienestar, confianza y satisfacción.</p>
+          <p class="body-text"><strong>Somos especialistas en medicina estética integral</strong>, combinando tratamientos no invasivos, mini invasivos y procedimientos quirúrgicos para brindarte soluciones adaptadas a tus necesidades específicas. Nuestro equipo médico está comprometido con tu bienestar y con ofrecer los más altos estándares de calidad y seguridad.</p>
+        </div>
+        <div class="nosotros__values">
+          <div class="value-card">
+            <span class="value-card__icon">◈</span>
+            <h4>Seguridad</h4>
+            <p>Procedimientos avalados por especialistas con formación universitaria de excelencia.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__icon">◈</span>
+            <h4>Personalización</h4>
+            <p>Cada tratamiento es diseñado según las necesidades y objetivos únicos de cada paciente.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__icon">◈</span>
+            <h4>Resultados</h4>
+            <p>Tecnología de vanguardia para resultados visibles, naturales y duraderos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIALISTAS -->
+  <section class="section especialistas" id="especialistas">
+    <div class="container">
+      <p class="eyebrow text-center">Nuestro equipo</p>
+      <h2 class="text-center">Las especialistas</h2>
+      <div class="especialistas__grid">
+
+        <div class="doc-card">
+          <div class="doc-card__photo doc-card__photo--ale">
+            <div class="doc-card__initials">AC</div>
+          </div>
+          <div class="doc-card__info">
+            <h3>Dra. María Alejandra Cortés</h3>
+            <span class="doc-card__tag">Cirugía · Estética Facial</span>
+            <ul class="doc-card__credentials">
+              <li>Médica — Universidad de Buenos Aires</li>
+              <li>Cirujana General — Ministerio de Salud</li>
+              <li>Cirujana de Cabeza y Cuello</li>
+              <li>Especialista en patología cutánea y medicina estética</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="doc-card">
+          <div class="doc-card__photo doc-card__photo--lau">
+            <div class="doc-card__initials">LC</div>
+          </div>
+          <div class="doc-card__info">
+            <h3>Dra. Laura Capizzano</h3>
+            <span class="doc-card__tag">Cirugía Plástica · Reconstrucción</span>
+            <ul class="doc-card__credentials">
+              <li>Médica — UBA · Diploma de Honor</li>
+              <li>Cirujana General — Ministerio de Salud</li>
+              <li>Cirujana Plástica — Universidad Católica Argentina</li>
+              <li>Miembro SCPBA · Miembro SACPER</li>
+              <li>Especialista en patología de piel, mamaria y úlceras crónicas</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES -->
+  <section class="section especialidades-section" id="especialidades">
+    <div class="container">
+      <p class="eyebrow text-center">Qué ofrecemos</p>
+      <h2 class="text-center">Especialidades<br />&amp; Tratamientos</h2>
+      <p class="section-intro text-center">Ofrecemos una amplia gama de tratamientos estéticos y quirúrgicos de última generación. Selecciona una especialidad para conocer más detalles sobre cada procedimiento. Haz clic en cualquier tratamiento para obtener información completa y agendar tu consulta.</p>
+
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('facial')">Estética Facial</button>
+        <button class="tab" onclick="switchTab('corporal')">Estética Corporal</button>
+        <button class="tab" onclick="switchTab('capilar')">Tratamiento Capilar</button>
+        <button class="tab" onclick="switchTab('miniinvasivo')">Mini Invasivos</button>
+        <button class="tab" onclick="switchTab('quirurgico')">Cirugía</button>
+      </div>
+
+      <div class="tab-content active" id="tab-facial">
+        <div class="treatments-grid">
+          <a href="tratamientos/radiofrecuencia-bipolar.html" class="treatment" target="_blank">
+            <h4>Radiofrecuencia Bipolar</h4>
+            <p>Tensa la piel y mejora la flacidez estimulando la producción de colágeno.</p>
+          </a>
+          <a href="tratamientos/radiofrecuencia-fraccionada.html" class="treatment" target="_blank">
+            <h4>Radiofrecuencia Fraccionada</h4>
+            <p>Rejuvenecimiento profundo para arrugas y cicatrices.</p>
+          </a>
+          <a href="tratamientos/mesoterapia-facial.html" class="treatment" target="_blank">
+            <h4>Mesoterapia Facial</h4>
+            <p>Intradermoterapia con vitaminas y oligoelementos para tratar envejecimiento y fotodaño.</p>
+          </a>
+          <a href="tratamientos/punta-de-diamante.html" class="treatment" target="_blank">
+            <h4>Punta de Diamante</h4>
+            <p>Exfoliación profunda que otorga tersura y luminosidad al rostro.</p>
+          </a>
+          <a href="tratamientos/peeling-químico.html" class="treatment" target="_blank">
+            <h4>Peeling Químico</h4>
+            <p>Renovación cutánea para manchas, acné y líneas finas de expresión.</p>
+          </a>
+          <a href="tratamientos/láser-facial.html" class="treatment" target="_blank">
+            <h4>Láser Facial</h4>
+            <p>Estimula el colágeno y mejora la calidad y textura de la piel.</p>
+          </a>
+          <a href="tratamientos/toxina-botulínica.html" class="treatment" target="_blank">
+            <h4>Toxina Botulínica</h4>
+            <p>Elimina arrugas de expresión y previene su formación de manera natural.</p>
+          </a>
+          <a href="tratamientos/clearlift.html" class="treatment" target="_blank">
+            <h4>ClearLift</h4>
+            <p>Rejuvenecimiento láser sin tiempo de recuperación.</p>
+          </a>
+          <a href="tratamientos/láser-erbium.html" class="treatment" target="_blank">
+            <h4>Láser Erbium</h4>
+            <p>Renovación intensiva para arrugas profundas y cicatrices.</p>
+          </a>
+          <a href="tratamientos/plasma-rico-en-plaquetas-prp.html" class="treatment" target="_blank">
+            <h4>Plasma Rico en Plaquetas (PRP)</h4>
+            <p>Regeneración celular con factores de crecimiento propios del paciente.</p>
+          </a>
+          <a href="tratamientos/lifting-endolifting.html" class="treatment" target="_blank">
+            <h4>Lifting · Endolifting</h4>
+            <p>Tensado facial con y sin incisiones para resultados naturales y duraderos.</p>
+          </a>
+          <a href="tratamientos/blefaroplastia-hilos-tensores.html" class="treatment" target="_blank">
+            <h4>Blefaroplastia · Hilos Tensores</h4>
+            <p>Corrección de párpados y efecto lifting con resultados armónicos.</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-corporal">
+        <div class="treatments-grid">
+          <a href="tratamientos/radiofrecuencia-corporal.html" class="treatment" target="_blank">
+            <h4>Radiofrecuencia Corporal</h4>
+            <p>Reafirmación y mejora de flacidez en zonas específicas del cuerpo.</p>
+          </a>
+          <a href="tratamientos/ultracavitación.html" class="treatment" target="_blank">
+            <h4>Ultracavitación</h4>
+            <p>Reducción de grasa localizada mediante ultrasonidos de baja frecuencia.</p>
+          </a>
+          <a href="tratamientos/ondas-rusas.html" class="treatment" target="_blank">
+            <h4>Ondas Rusas</h4>
+            <p>Estimulación muscular para tonificación y reducción de medidas.</p>
+          </a>
+          <a href="tratamientos/láser-corporal.html" class="treatment" target="_blank">
+            <h4>Láser Corporal</h4>
+            <p>Tratamiento de piel y tejidos con tecnología láser de última generación.</p>
+          </a>
+          <a href="tratamientos/mesoterapia-corporal.html" class="treatment" target="_blank">
+            <h4>Mesoterapia Corporal</h4>
+            <p>Microinyecciones con activos lipolíticos y reafirmantes.</p>
+          </a>
+          <a href="tratamientos/fosfatidilcolina.html" class="treatment" target="_blank">
+            <h4>Fosfatidilcolina</h4>
+            <p>Disolución de grasa localizada de forma no quirúrgica.</p>
+          </a>
+          <a href="tratamientos/prp-corporal.html" class="treatment" target="_blank">
+            <h4>PRP Corporal</h4>
+            <p>Regeneración cutánea en zonas específicas del cuerpo.</p>
+          </a>
+          <a href="tratamientos/lipólisis-láser.html" class="treatment" target="_blank">
+            <h4>Lipólisis Láser</h4>
+            <p>Reducción de grasa localizada sin intervención quirúrgica.</p>
+          </a>
+          <a href="tratamientos/presoterapia.html" class="treatment" target="_blank">
+            <h4>Presoterapia</h4>
+            <p>Drenaje linfático, mejora de circulación y tratamiento de celulitis.</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-capilar">
+        <div class="treatments-grid">
+          <a href="tratamientos/prp-capilar.html" class="treatment" target="_blank">
+            <h4>PRP Capilar</h4>
+            <p>Regeneración y estimulación del folículo capilar con factores de crecimiento propios.</p>
+          </a>
+          <a href="tratamientos/mesoterapia-capilar.html" class="treatment" target="_blank">
+            <h4>Mesoterapia Capilar</h4>
+            <p>Microinyecciones con vitaminas y activos para fortalecer y estimular el cabello.</p>
+          </a>
+          <a href="tratamientos/láser-de-erbium-capilar.html" class="treatment" target="_blank">
+            <h4>Láser de Erbium Capilar</h4>
+            <p>Estimulación del cuero cabelludo y mejora de la densidad capilar.</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-miniinvasivo">
+        <div class="treatments-grid">
+          <a href="tratamientos/hilos-tensores.html" class="treatment" target="_blank">
+            <h4>Hilos Tensores</h4>
+            <p>Efecto lifting sin cirugía con estimulación de colágeno y resultados naturales.</p>
+          </a>
+          <a href="tratamientos/rellenos-con-ácido-hialurónico.html" class="treatment" target="_blank">
+            <h4>Rellenos con Ácido Hialurónico</h4>
+            <p>Restauración de volumen e hidratación profunda. Incluye aumento de labios.</p>
+          </a>
+          <a href="tratamientos/lipólisis-láser.html" class="treatment" target="_blank">
+            <h4>Lipólisis Láser</h4>
+            <p>Reducción de grasa localizada sin cirugía ni tiempo de recuperación prolongado.</p>
+          </a>
+          <a href="tratamientos/infiltraciones-estéticas.html" class="treatment" target="_blank">
+            <h4>Infiltraciones Estéticas</h4>
+            <p>Bioestimulación y revitalización de la piel con resultados progresivos.</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-quirurgico">
+        <div class="treatments-grid">
+          <a href="tratamientos/cirugía-mamaria.html" class="treatment" target="_blank">
+            <h4>Cirugía Mamaria</h4>
+            <p>Aumento, reducción y elevación mamaria con resultados proporcionados y naturales.</p>
+          </a>
+          <a href="tratamientos/cirugía-de-párpados.html" class="treatment" target="_blank">
+            <h4>Cirugía de Párpados</h4>
+            <p>Blefaroplastia superior e inferior para rejuvenecer la mirada.</p>
+          </a>
+          <a href="tratamientos/abdominoplastia.html" class="treatment" target="_blank">
+            <h4>Abdominoplastia</h4>
+            <p>Tensado abdominal con resultados firmes y contornos definidos.</p>
+          </a>
+          <a href="tratamientos/cirugía-post-bariátrica.html" class="treatment" target="_blank">
+            <h4>Cirugía Post Bariátrica</h4>
+            <p>Reconstrucción corporal integral tras pérdida significativa de peso.</p>
+          </a>
+          <a href="tratamientos/resección-de-tumores-de-piel.html" class="treatment" target="_blank">
+            <h4>Resección de Tumores de Piel</h4>
+            <p>Extirpación segura con análisis anatomopatológico y mínima cicatriz.</p>
+          </a>
+          <a href="tratamientos/plástica-de-cicatrices.html" class="treatment" target="_blank">
+            <h4>Plástica de Cicatrices</h4>
+            <p>Corrección y mejora estética de cicatrices de diversa etiología.</p>
+          </a>
+          <a href="tratamientos/lipoaspiración.html" class="treatment" target="_blank">
+            <h4>Lipoaspiración</h4>
+            <p>Modelado corporal mediante aspiración de grasa localizada.</p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECNOLOGÍA -->
+  <section class="section tecnologia-section" id="tecnologia">
+    <div class="container">
+      <p class="eyebrow text-center">Equipamiento</p>
+      <h2 class="text-center">Tecnología<br />de vanguardia</h2>
+      <p class="section-intro text-center">Trabajamos con equipamiento de última generación para garantizar seguridad y resultados efectivos en cada procedimiento.</p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-card__num">01</div>
+          <h4>Harmony XL Pro</h4>
+          <p>Plataforma láser multifunción para rejuvenecimiento, manchas, acné, rosácea, cicatrices y remoción de tatuajes.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card__num">02</div>
+          <h4>Láser Diodo</h4>
+          <p>Rejuvenecimiento facial, manchas, flacidez, rosácea y eliminación de arañitas vasculares.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card__num">03</div>
+          <h4>Luz Pulsada Intensa (IPL)</h4>
+          <p>Manchas, rojeces, fotoenvejecimiento, acné, rosácea y depilación definitiva.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card__num">04</div>
+          <h4>Ultrasonido Estético</h4>
+          <p>Tratamiento de grasa localizada y flacidez corporal mediante energía ultrasónica.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card__num">05</div>
+          <h4>Botas de Presoterapia</h4>
+          <p>Drenaje linfático, mejora de circulación y tratamiento de celulitis edematosa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contacto-section" id="contacto">
+    <div class="container">
+      <div class="contacto__grid">
+        <div class="contacto__text">
+          <p class="eyebrow">Contacto</p>
+          <h2>Comenzá<br />tu experiencia<br /><em>hoy.</em></h2>
+          <p class="body-text">Nuestro equipo está listo para asesorarte y acompañarte en cada etapa del tratamiento. Solicitá tu turno y dá el primer paso hacia tu mejor versión.</p>
+          <div class="contacto__data">
+            <a href="https://wa.me/541173613286?text=Hola!%20Quisiera%20agendar%20una%20consulta" target="_blank" class="contact-item">
+              <span class="contact-item__icon">💬</span>
+              <span><strong>WhatsApp:</strong> 11 7361-3286</span>
+            </a>
+            <a href="mailto:cycesteticaycirugia@gmail.com?subject=Consulta%20Estética" class="contact-item">
+              <span class="contact-item__icon">✉</span>
+              <span><strong>Correo:</strong> cycesteticaycirugia@gmail.com</span>
+            </a>
+            <a href="https://instagram.com/cycesteticaycirugia" target="_blank" class="contact-item">
+              <span class="contact-item__icon">📱</span>
+              <span><strong>Instagram:</strong> @cycesteticaycirugia</span>
+            </a>
+          </div>
+        </div>
+        <div class="contacto__form">
+          <form action="https://formspree.io/f/cycesteticaycirugia@gmail.com" method="POST">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="11 xxxx-xxxx" />
+            </div>
+            <div class="form-group">
+              <label for="tratamiento">Tratamiento de interés</label>
+              <select id="tratamiento" name="tratamiento">
+                <option value="">Seleccioná una opción</option>
+                <option>Estética Facial</option>
+                <option>Estética Corporal</option>
+                <option>Tratamiento Capilar</option>
+                <option>Procedimiento Mini Invasivo</option>
+                <option>Procedimiento Quirúrgico</option>
+                <option>Consulta general</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje (opcional)</label>
+              <textarea id="mensaje" name="mensaje" rows="3" placeholder="Contanos más sobre tu consulta..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Enviar consulta</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <span>✓</span>
+            <p>¡Gracias! Nos pondremos en contacto a la brevedad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="logo.png" alt="CyC Estética y Cirugía" class="footer__logo-img" />
+      </div>
+      <p class="footer__copy">© 2025 Cortés &amp; Capizzano Estética y Cirugía. Todos los derechos reservados.</p>
+      <p class="footer__legal">Los resultados pueden variar. Los procedimientos son realizados exclusivamente por profesionales médicos habilitados.</p>
+    </div>
+  </footer>
+
+  <script>
+
+</script>
+</body>
+</html>
