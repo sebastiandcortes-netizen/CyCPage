@@ -19,7 +19,7 @@ export default function Footer() {
           Todos los derechos reservados.
         </p>
         <p className="max-w-[480px] text-[11px] text-cream/20">
-          Los resultados pueden variar. Los procedimientos son realizados
+          Los procedimientos son realizados
           exclusivamente por profesionales médicos habilitados.
         </p>
       </div>
