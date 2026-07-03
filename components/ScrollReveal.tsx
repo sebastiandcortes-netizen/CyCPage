@@ -2,11 +2,6 @@
 
 import { useEffect } from "react";
 
-/**
- * Observa todos los elementos con clase `.reveal` y les agrega `is-visible`
- * cuando entran en viewport. Reemplaza el IntersectionObserver del script.js
- * original. Se monta una vez por página.
- */
 export default function ScrollReveal() {
   useEffect(() => {
     const els = Array.from(document.querySelectorAll<HTMLElement>(".reveal"));

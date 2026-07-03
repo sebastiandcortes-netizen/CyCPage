@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://TU-DOMINIO.com"), // descomentar y poner el dominio real al tenerlo
+  // metadataBase: new URL("https://TU-DOMINIO.com"),
   title: {
     default: "Cortés & Capizzano — Estética & Cirugía",
     template: "%s — Cortés & Capizzano",

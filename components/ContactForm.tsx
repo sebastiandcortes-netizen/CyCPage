@@ -51,25 +51,27 @@ export default function ContactForm({
   if (status === "success") {
     return (
       <div className="rounded-sm border border-navy/10 bg-white p-10 text-center">
-        <span className="mb-3 block text-[32px] text-gold">✓</span>
-        <p className="font-display text-[20px] font-light text-navy">
+        <span className="mb-4 block text-[40px] text-gold">✓</span>
+        {/* CAMBIADO: text-[20px] → text-[24px] */}
+        <p className="font-display text-[24px] font-light text-navy">
           ¡Gracias! Nos pondremos en contacto a la brevedad.
         </p>
       </div>
     );
   }
 
+  /* CAMBIADO: labels text-[11px] → text-[14px], inputs text-[15px] → text-[18px] */
   const labelCls =
-    "mb-2 block text-[11px] font-medium uppercase tracking-[0.1em] text-navy";
+    "mb-2 block text-[14px] font-medium uppercase tracking-[0.08em] text-navy";
   const fieldCls =
-    "w-full rounded-sm border border-navy/10 bg-cream px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-gold";
+    "w-full rounded-sm border border-navy/10 bg-cream px-4 py-3.5 text-[18px] text-ink outline-none transition-colors focus:border-gold";
 
   return (
     <form
       onSubmit={handleSubmit}
       className="rounded-sm border border-navy/10 bg-white p-10 max-sm:p-7"
     >
-      <div className="mb-5">
+      <div className="mb-6">
         <label htmlFor="nombre" className={labelCls}>
           Nombre completo
         </label>
@@ -82,7 +84,7 @@ export default function ContactForm({
           className={fieldCls}
         />
       </div>
-      <div className="mb-5">
+      <div className="mb-6">
         <label htmlFor="email" className={labelCls}>
           Correo electrónico
         </label>
@@ -95,7 +97,7 @@ export default function ContactForm({
           className={fieldCls}
         />
       </div>
-      <div className="mb-5">
+      <div className="mb-6">
         <label htmlFor="telefono" className={labelCls}>
           Teléfono
         </label>
@@ -107,7 +109,7 @@ export default function ContactForm({
           className={fieldCls}
         />
       </div>
-      <div className="mb-5">
+      <div className="mb-6">
         <label htmlFor="tratamiento" className={labelCls}>
           Tratamiento de interés
         </label>
@@ -123,32 +125,34 @@ export default function ContactForm({
           ))}
         </select>
       </div>
-      <div className="mb-5">
+      <div className="mb-6">
         <label htmlFor="mensaje" className={labelCls}>
           Mensaje (opcional)
         </label>
         <textarea
           id="mensaje"
           name="mensaje"
-          rows={3}
+          rows={4}
           placeholder="Contanos más sobre tu consulta..."
-          className={`${fieldCls} min-h-20 resize-y`}
+          className={`${fieldCls} min-h-24 resize-y`}
         />
       </div>
 
+      {/* CAMBIADO: text-[12px] → text-[15px], py aumentado */}
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full rounded-sm border border-gold bg-gold px-8 py-3.5 text-center text-[12px] uppercase tracking-[0.12em] text-white transition-colors hover:border-brown hover:bg-brown disabled:opacity-60"
+        className="w-full rounded-sm border border-gold bg-gold px-8 py-4 text-center text-[15px] uppercase tracking-[0.1em] text-white transition-colors hover:border-brown hover:bg-brown disabled:opacity-60"
       >
         {status === "sending" ? "Enviando…" : "Enviar consulta"}
       </button>
 
       {status === "error" && (
-        <p className="mt-4 text-center text-[14px] text-red-600">
+        /* CAMBIADO: text-[14px] → text-[17px] */
+        <p className="mt-4 text-center text-[17px] text-red-600">
           {FORMSPREE_ID
             ? "Hubo un problema al enviar. Probá de nuevo o escribinos por WhatsApp."
-            : "El formulario aún no está configurado. Definí NEXT_PUBLIC_FORMSPREE_ID."}
+            : "El formulario aún no está configurado. Definí NEXT_PUBLIC_FORMSPREE_ID en .env.local"}
         </p>
       )}
     </form>
